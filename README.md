@@ -88,10 +88,10 @@ Drive-OccWorld plans trajectories through forecasting future occupancy state and
 
 ## 📝 TODO
 
-- [] train & inference code
-- [] pretrained weight for inflated occupancy forecasting on nuScenes
-- [] pretrained weight for fine-grained occupancy forecasting on nuScenes
-- [] pretrained weight for inflated occupancy forecasting on Lyft
+- [ ] train & inference code
+- [ ] pretrained weight for inflated occupancy forecasting on nuScenes
+- [ ] pretrained weight for fine-grained occupancy forecasting on nuScenes
+- [ ] pretrained weight for inflated occupancy forecasting on Lyft
 
 
 <!-- ## Acknowledgments
