@@ -9,7 +9,7 @@
 
 
 ## 📢 News
-- `[2024-12-10]` Our Drive-OccWorld is accepted by AAAI 2025!
+- `[2024-12-10]` Our Drive-OccWorld is accepted by AAAI 2025 (Oral)!
 
 - `[2024-10-14]` We released our project website [here](https://drive-occworld.github.io/).
 
@@ -26,13 +26,13 @@
 **4D Occupancy Forecasting and Planning via World Model**. Drive-OccWorld takes observations and trajectories as input, incorporating flexible action conditions for **action-controllable generation**. By leveraging world knowledge and the generative capacity of the world model, we further integrate it with a planner for **continuous forecasting and planning**.
 
 
-## 🧩 Piepeline
-<div style="text-align:center;">
-    <img src="assets/figures/pipeline.png" alt="pipeline" width="600">
-</div>
+## 📝 Getting Started
 
-**Overview of Drive-OccWorld**. (a) The **history encoder** extracts multi-view image features and transforms them into BEV embeddings. (b) The **memory queue** employs semantic- and motion-conditional normalization to aggregate historical information. (c) The **world decoder** incorporates action conditions to generate various future occupancies and flows. Integrating the world decoder with an occupancy-based planner enables continuous forecasting and planning.
+- [Installation](DOCS/INSTALL.MD) 
 
+- [Prepare Dataset](DOCS/DATASET.MD)
+
+- [Train and Evaluation](DOCS/TRAIN_EVAL.MD)
 
 ## 🎥 Demo of 4D Occupancy and Flow Forecasting
 
@@ -86,21 +86,16 @@ Drive-OccWorld plans trajectories through forecasting future occupancy state and
 </div>
 
 
-## 📝 TODO
-
-- [ ] train & inference code
-- [ ] pretrained weight for inflated occupancy forecasting on nuScenes
-- [ ] pretrained weight for fine-grained occupancy forecasting on nuScenes
-- [ ] pretrained weight for inflated occupancy forecasting on Lyft
-
-
-<!-- ## Acknowledgments
+## Acknowledgments
 
 We utilized the following repos during development:
 
-* []()
+* [ViDAR](https://github.com/OpenDriveLab/ViDAR)
+* [Cam4DOcc](https://github.com/haomo-ai/Cam4DOcc)
+* [ST-P3](https://github.com/OpenDriveLab/ST-P3)
+* [UniAD](https://github.com/OpenDriveLab/UniAD)
 
-Thanks for their Awesome open-sourced work! -->
+Thanks for their Awesome open-sourced work!
 
 <!-- ## 📄 License
 

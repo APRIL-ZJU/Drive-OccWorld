@@ -1,0 +1,45 @@
+# Train and Evaluate
+
+**1. Generate the Inflated Occupancy Annotations as described [here](DATASET.MD#L49):**
+
+1) Set ```only_generate_dataset=True``` in both [projects/configs/inflated/action_condition_GMO.py](../projects/configs/inflated/action_condition_GMO.py) and [projects/configs/inflated/action_condition_MMO.py](../projects/configs/inflated/action_condition_MMO.py)
+2) Run the training and evaluation scripts using these configurations. Since the model's forward process is not executed, this will not consume GPU memory:
+```bash
+CONFIG=projects/configs/inflated/action_condition_GMO.py
+GPU_NUM=8   # 8 GPUs(Processes) consume ~20 hours
+
+# Generate training data
+./tools/dist_train.sh ${CONFIG} ${GPU_NUM}
+
+# Generate validation data
+CKPT=work_dirs/action_condition_GMO/epoch_1.pth
+./tools/dist_test.sh ${CONFIG} ${CKPT} ${GPU_NUM}
+```
+
+
+**2. Train**
+
+```bash
+CONFIG=path/to/config.py
+GPU_NUM=8
+
+./tools/dist_train.sh ${CONFIG} ${GPU_NUM}
+```
+
+Configuration Files:
+1) [projects/configs/inflated/action_condition_GMO.py](../projects/configs/inflated/action_condition_GMO.py): Predicts General Moveable Objects (GMO) using the inflated occupancy annotations as defined in [Cam4DOcc](https://github.com/haomo-ai/Cam4DOcc).
+2) [projects/configs/inflated/action_condition_MMO.py](../projects/configs/inflated/action_condition_MMO.py): Predicts Multi-class Moveable Objects (MMO) using the inflated occupancy annotations defined in [Cam4DOcc](https://github.com/haomo-ai/Cam4DOcc).
+3) [projects/configs/fine_grained/action_condition_GMO.py](../projects/configs/fine_grained/action_condition_GMO.py): Predicts General Moveable Objects (GMO) using the fine-grained occupancy annotations defined in [nuScenes-Occupancy](https://github.com/JeffWang987/OpenOccupancy/blob/main/docs/prepare_data.md)
+4) [projects/configs/fine_grained/action_condition_GMO_GSO.py](../projects/configs/fine_grained/action_condition_GMO_GSO.py): Predicts General Moveable Objects (GMO) and General Static Objects (GSO) using the fine-grained occupancy annotations defined in [nuScenes-Occupancy](https://github.com/JeffWang987/OpenOccupancy/blob/main/docs/prepare_data.md)
+5) [projects/configs/fine_grained/action_condition_MMO_MSO.py](../projects/configs/fine_grained/action_condition_MMO_MSO.py): Predicts Multi-class Moveable Objects (MMO) and Multi-class Static Objects (MSO) using the fine-grained occupancy annotations defined in [nuScenes-Occupancy](https://github.com/JeffWang987/OpenOccupancy/blob/main/docs/prepare_data.md)
+
+
+**3. Evaluate**
+
+```bash
+CONFIG=path/to/config.py
+CKPT=work_dirs/config_file_name/epoch_24.pth
+GPU_NUM=8
+
+./tools/dist_test.sh ${CONFIG} ${CKPT} ${GPU_NUM}
+```
