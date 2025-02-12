@@ -27,11 +27,11 @@ GPU_NUM=8
 ```
 
 Configuration Files:
-1) [projects/configs/inflated/action_condition_GMO.py](../projects/configs/inflated/action_condition_GMO.py): Predicts General Moveable Objects (GMO) using the inflated occupancy annotations as defined in [Cam4DOcc](https://github.com/haomo-ai/Cam4DOcc).
-2) [projects/configs/inflated/action_condition_MMO.py](../projects/configs/inflated/action_condition_MMO.py): Predicts Multi-class Moveable Objects (MMO) using the inflated occupancy annotations defined in [Cam4DOcc](https://github.com/haomo-ai/Cam4DOcc).
-3) [projects/configs/fine_grained/action_condition_GMO.py](../projects/configs/fine_grained/action_condition_GMO.py): Predicts General Moveable Objects (GMO) using the fine-grained occupancy annotations defined in [nuScenes-Occupancy](https://github.com/JeffWang987/OpenOccupancy/blob/main/docs/prepare_data.md)
-4) [projects/configs/fine_grained/action_condition_GMO_GSO.py](../projects/configs/fine_grained/action_condition_GMO_GSO.py): Predicts General Moveable Objects (GMO) and General Static Objects (GSO) using the fine-grained occupancy annotations defined in [nuScenes-Occupancy](https://github.com/JeffWang987/OpenOccupancy/blob/main/docs/prepare_data.md)
-5) [projects/configs/fine_grained/action_condition_MMO_MSO.py](../projects/configs/fine_grained/action_condition_MMO_MSO.py): Predicts Multi-class Moveable Objects (MMO) and Multi-class Static Objects (MSO) using the fine-grained occupancy annotations defined in [nuScenes-Occupancy](https://github.com/JeffWang987/OpenOccupancy/blob/main/docs/prepare_data.md)
+1) [inflated/action_condition_GMO.py](../projects/configs/inflated/action_condition_GMO.py): Predicts General Moveable Objects (GMO) using the inflated occupancy annotations as defined in [Cam4DOcc](https://github.com/haomo-ai/Cam4DOcc).
+2) [inflated/action_condition_MMO.py](../projects/configs/inflated/action_condition_MMO.py): Predicts Multi-class Moveable Objects (MMO) using the inflated occupancy annotations defined in [Cam4DOcc](https://github.com/haomo-ai/Cam4DOcc).
+3) [fine_grained/action_condition_GMO.py](../projects/configs/fine_grained/action_condition_GMO.py): Predicts General Moveable Objects (GMO) using the fine-grained occupancy annotations defined in [nuScenes-Occupancy](https://github.com/JeffWang987/OpenOccupancy/blob/main/docs/prepare_data.md)
+4) [fine_grained/action_condition_GMO_GSO.py](../projects/configs/fine_grained/action_condition_GMO_GSO.py): Predicts General Moveable Objects (GMO) and General Static Objects (GSO) using the fine-grained occupancy annotations defined in [nuScenes-Occupancy](https://github.com/JeffWang987/OpenOccupancy/blob/main/docs/prepare_data.md)
+5) [fine_grained/action_condition_MMO_MSO.py](../projects/configs/fine_grained/action_condition_MMO_MSO.py): Predicts Multi-class Moveable Objects (MMO) and Multi-class Static Objects (MSO) using the fine-grained occupancy annotations defined in [nuScenes-Occupancy](https://github.com/JeffWang987/OpenOccupancy/blob/main/docs/prepare_data.md)
 
 
 **3. Evaluate**
